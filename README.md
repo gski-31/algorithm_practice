@@ -1,2 +1,2 @@
-# w3resource
-JavaScript Exercises
+# w3resource Exercises
+https://www.w3resource.com/
