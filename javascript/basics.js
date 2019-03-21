@@ -52,27 +52,35 @@ console.log(triangleArea(5, 6, 7));
 // —————————————————————————————————————————————————————————————————————————————— >
 // 5. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+let myString = 'w3resource';
+let x = myString.split('');
+for(let i = 0 ; i < x.length ; i++){
+    let y = x.pop();
+    x.unshift(y);
+}
+let z = x.join('');
+console.log(z);
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function leapCheck(year){
+    return year % 4 === 0;
+};
+console.log(leapCheck(1984));
+console.log(leapCheck(1999));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 7. Write a JavaScript program to find 1 st January is being a Sunday between 2014 and 2050.
-// —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 8. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number.If the user input matches with guess number, the program will display a message "Good Work"
-// otherwise display a message "Not matched".
+// 8. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number.If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".
 // —————————————————————————————————————————————————————————————————————————————— >
 
 
