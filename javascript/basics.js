@@ -6,29 +6,34 @@
 // Current time is: 10 PM: 30: 38
 // —————————————————————————————————————————————————————————————————————————————— >
 /*
-let now = new Date();
-let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-let h = now.getHours();
-let m = now.getMinutes();
-let f = 'AM'
+currentDay();
 
-if(h > 12 ){
-    h = now.getHours() - 12;
-    f = 'PM';
+function currentDay() {
+    let now = new Date();
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let f = 'AM';
+    if (h > 12) {
+        h = now.getHours() - 12;
+        f = 'PM';
+    }
+    if (m <= 9) {
+        m = '0' + m;
+    }
+    console.log(`Today is: ${days[now.getDay()]}`);
+    console.log(`The Current Time is: ${h}:${m} ${f}`);
 }
-
-if (m <= 9) {
-    m = '0' + m;
-}
-
-console.log(`Today is: ${days[now.getDay()]}`);
-console.log(`The Current Time is: ${h}:${m} ${f}`);
 */
 // —————————————————————————————————————————————————————————————————————————————— >
 // 2. Write a JavaScript program to print the contents of the current window.
 // —————————————————————————————————————————————————————————————————————————————— >
- /*
- window.print();
+/*
+printWindow();
+
+function printWindow() {
+    window.print();
+}
 */
 // —————————————————————————————————————————————————————————————————————————————— >
 // 3. Write a JavaScript program to get the current date.
@@ -36,8 +41,12 @@ console.log(`The Current Time is: ${h}:${m} ${f}`);
 // mm - dd - yyyy, mm / dd / yyyy or dd - mm - yyyy, dd / mm / yyyy
 // —————————————————————————————————————————————————————————————————————————————— >
 /*
-let today = new Date();
-console.log(`Today is ${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`)
+currentDate();
+
+function currentDate() {
+    let today = new Date();
+    console.log(`Today is ${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`);
+}
 */
 // —————————————————————————————————————————————————————————————————————————————— >
 // 4. Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
@@ -53,14 +62,18 @@ console.log(triangleArea(5, 6, 7));
 // 5. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.
 // —————————————————————————————————————————————————————————————————————————————— >
 /*
-let myString = 'w3resource';
-let x = myString.split('');
-for(let i = 0 ; i < x.length ; i++){
-    let y = x.pop();
-    x.unshift(y);
+dumbReverse();
+
+function dumbReverse() {
+    let myString = 'w3resource';
+    let x = myString.split('');
+    for (let i = 0; i < x.length; i++) {
+        let y = x.pop();
+        x.unshift(y);
+    }
+    let z = x.join('');
+    console.log(z);
 }
-let z = x.join('');
-console.log(z);
 */
 // —————————————————————————————————————————————————————————————————————————————— >
 // 6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
@@ -75,61 +88,107 @@ console.log(leapCheck(1999));
 // —————————————————————————————————————————————————————————————————————————————— >
 // 7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+janOneSun();
 
+function janOneSun() {
+    for (let y = 2014; y <= 2050; y++) {
+        let d = new Date(y, 0, 1);
+        d.getDay() == 0 ? console.log(`Sunday, January 1st, ${y}`) : false;
+    }
+}
+// 2-28 is on weekend
 
+birthdayWeekendCheck();
 
-
+function birthdayWeekendCheck() {
+    for (let y = 1974; y <= 2074; y++) {
+        let d = new Date(y, 1, 28);
+        d.getDay() == 6 || d.getDay() == 0 ? console.log(`Birthday on a weekend in ${y}`) : false;
+    }
+}
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 8. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number.If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+numberGuess();
 
-
-
-
+function numberGuess() {
+    let num = Math.floor(Math.random() * 10 + 1);
+    let guess = prompt('pick a number 1 to 10');
+    guess === num ? alert("Good Work") : alert("Not matched");
+}
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 9. Write a JavaScript program to calculate days left until next Christmas.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+cmasCountdown();
 
-
-
-
+function cmasCountdown() {
+    let cd = new Date();
+    let cmas = new Date(cd.getFullYear(), 11, 25);
+    console.log(`There are ${Math.ceil((cmas - cd) / 8.64e+7)} days till Christmas.`);
+}
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 10. Write a JavaScript program to calculate multiplication and division of two numbers(input from user).
 // Sample form:
 // sample form
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+calc();
 
-
-
-
+function calc() {
+    let a = prompt(`please give a number`);
+    let x = prompt(`multiply or divide?`);
+    let b = prompt(`please give a 2nd number`);
+    if (x == 'multiply') {
+        alert(a * b);
+    }
+    else if (x == 'divide') {
+        alert(a / b);
+    }
+    else {
+        alert('nope');
+    }
+}
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.[Formula: c / 5 = (f - 32) / 9[where c = temperature in Celsius and f = temperature in Fahrenheit]Expected Output:
 // 60° C is 140° F 45° F is 7.222222222222222° C
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function convertTemp(far){
+    return (far - 32)  * (5 / 9);
+}
+console.log(convertTemp(94));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 12. Write a JavaScript program to get the website URL(loading page).—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+console.log(document.URL);
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 13. Write a JavaScript exercise to create a variable using a user - defined name.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function createVar(x){
+    return x = 'some value';
+}
 
-
-
-
+console.log(createVar('newVar'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 14. Write a JavaScript exercise to get the extension of a filename.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function getExtension(filename){
+    return filename.split('.').pop();
+}
+console.log(getExtension('filename.xyz'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 15. Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.
 // —————————————————————————————————————————————————————————————————————————————— >
