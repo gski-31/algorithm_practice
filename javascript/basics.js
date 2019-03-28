@@ -348,83 +348,120 @@ console.log(checkFifNin(8, 4, 2));
 // —————————————————————————————————————————————————————————————————————————————— >
 // 30. Write a JavaScript program to check if a string "Script" presents at 5th (index 4) position in a given string, if "Script" presents in the string return the string without "Script" otherwise return the original one.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function scriptCheck(str) {
+    return str.slice(4, 10) === 'Script' ? str.slice(0, 4) : str;
+}
+console.log(scriptCheck('JavaScript'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 31. Write a JavaScript program to find the largest of three given integers.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function largeInt(myArr){
+    return Math.max(...myArr); // ... spread operator
+}
+console.log(largeInt([26,54,23]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 32. Write a JavaScript program to find a value which is nearest to 100 from two different given integer values.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function num100(num1, num2) {
+    return Math.abs(num1 - 100) < Math.abs(num2 - 100) ? num1 : num2;
+}
+console.log(num100(4, 106));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 33. Write a JavaScript program to check if two numbers are in range 40. .60 or in the range 70. .100 inclusive.
+// 33. Write a JavaScript program to check if two numbers are in range 40 to 60 or in the range 70 to 100 inclusive.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function dualCheck(x, y){
+    return ((x >= 40 && x <= 60 && y >= 70 && y <= 100) || (x >= 70 && x <= 100 && y >= 40 && y <= 60)) ? 'the number are in range': 'not a match';
+}
+console.log(dualCheck(45, 80));
+console.log(dualCheck(145, 80));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 34. Write a JavaScript program to find the larger number from the two given positive integers, the two numbers are in the range 40. .60 inclusive.
+// 34. Write a JavaScript program to find the larger number from the two given positive integers, the two numbers are in the range 40 to 60 inclusive.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function checkRange(x,y){
+    if (x >= 40 && x <= 60 && y >= 40 && y <= 60){
+        return Math.max(x,y);
+    } else {
+        return 'pick new numbers';
+    }
+}
+console.log(checkRange(42,58));
+console.log(checkRange(23,12));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 35. Write a JavaScript program to check a given string contains 2 to 4 numbers of a specified character.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(str, letter) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str.charAt(i) == letter) {
+            count++;
+        }
+    }
+    return count >= 2 && count <= 4;
+}
 
-
-
-
+console.log(newFunction('some string with s in it', 's'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 36. Write a JavaScript program to check if the last digit of the three given positive integers is same.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(myArr, num) {
+    let count = 0;
+    myArr.forEach(e => {
+        e.toString().endsWith(num.toString()) ? count++ : false;
+    })
+    return count == myArr.length;
+}
 
-
-
-
+console.log(newFunction([256, 326, 456, ], 6));
+console.log(newFunction([256, 326, 174, 294, 456, ], 6));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 37. Write a JavaScript program to create new string with first 3 characters are in lower
-// case.If the string length is less than 3 convert all the characters in upper
-// case.
+// 37. Write a JavaScript program to create new string with first 3 characters are in lowercase. If the string length is less than 3 convert all the characters in upper case.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(str) {
+    return str.length < 3 ? str.toUpperCase() : str.slice(0, 3).toUpperCase() + str.slice(3, str.length);
+}
 
-
-
-
+console.log(newFunction('some stuff here'));
+console.log(newFunction('so'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 38. Write a JavaScript program to check the total marks of a student in various examinations.The student will get A + grade
-// if the total marks are in the range 89. .100 inclusive,
-// if the examination is "Final-exam."
-// the student will get A + grade and total marks must be greater than or equal to 90. Return true
-// if the student get A + grade or false otherwise.—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+// 38. Write a JavaScript program to check the total marks of a student in various examinations. The student will get A+ grade if the total marks are in the range 89 to 100 inclusive, if the examination is "Final-exam." the student will get A+ grade and total marks must be greater than or equal to 90. Return true if the student get A+ grade or false otherwise.
 // —————————————————————————————————————————————————————————————————————————————— >
-// 39. Write a JavaScript program to compute the sum of the two given integers, If the sum is in the range 50. .80
-// return 65 other wise
-// return 80.
+/*
+function test(total_mark, final_exam) {
+    return (final_exam == 'true') ? total_mark >= 90 : (total_mark >= 80 && total_mark <= 100);
+}
+
+console.log(test("78", " "));
+console.log(test("89", "true "));
+console.log(test("99", "true "));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+// 39. Write a JavaScript program to compute the sum of the two given integers, If the sum is in the range 50 to 80 return 65 other wise return 80.
 // —————————————————————————————————————————————————————————————————————————————— >
-// 40. Write a JavaScript program to check from two given integers
-// if either one is 8 or their sum or difference is 8.  —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(a,b) {
+    return (a + b) >= 50 && (a + b) <= 80 ? 65 : 80;
+}
+console.log(newFunction(26, 30));
+console.log(newFunction(26, 70));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 40. Write a JavaScript program to check from two given integers if either one is 8 or their sum or difference is 8.  —————————————————————————————————————————————————————————————————————————————— >
 
 
 
