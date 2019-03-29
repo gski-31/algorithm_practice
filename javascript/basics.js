@@ -534,65 +534,108 @@ console.log(newFunction(11,4));
 console.log(newFunction(26,18));
 console.log(newFunction(2,18));
 */
-
-
-
 // —————————————————————————————————————————————————————————————————————————————— >
-// 46. Write a JavaScript program to check two given non - negative integers and
-// if one of the number(not both) is multiple of 7 or 11.  —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+// 46. Write a JavaScript program to check two given non - negative integers and if one of the number(not both) is multiple of 7 or 11.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function valCheck(a, b) {
+    if (!((a % 7 == 0 || a % 11 == 0) && (b % 7 == 0 || b % 11 == 0))) {
+        return ((a % 7 == 0 || a % 11 == 0) || (b % 7 == 0 || b % 11 == 0));
+    } else
+        return false;
+}
+console.log(valCheck(14, 21));
+console.log(valCheck(14, 20));
+console.log(valCheck(16, 20));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 47. Write a JavaScript program to check if a number in the range 40..10000 inclusive presents in two number (in same range).
 // For example 40 presents in 400 and 4000
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(num) {
+    return num * 10 <= 10000 ? true : false;
+}
+console.log(newFunction(42));
+console.log(newFunction(160));
+console.log(newFunction(9810));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 48. Write a JavaScript program to reverse a given string.
 //—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    // let arr = str.split('');
+    // arr.reverse();
+    // return arr.join('');
+    return str.split('').reverse().join('');
+}
+console.log(newFunction('abscdefg'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    let newStr = '';
+    for (let i = 0; i < str.length; i++) {
+        newStr += String.fromCharCode(1 + str.charCodeAt(i));
+    }
+    return newStr;
+}
+console.log(newFunction('cfjmx'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 50. Write a JavaScript program to capitalize the first letter of each word of a given string.—————————————————————————————————————————————————————————————————————————————— >
+// 50. Write a JavaScript program to capitalize the first letter of each word of a given string.
+// —————————————————————————————————————————————————————————————————————————————— >
 
+// function newFunction(str) {
+//     str.split(' ').forEach(e => {
+//         var newStr = [];
+//         newStr += e.charAt(0).toUpperCase() + e.slice(1, e.length);
+//     });
+//     return newStr.join();
+// }
 
-
-
+// console.log(newFunction('capitalize the first letter of each word of a given string'));
+/*
+function newFunction(str) {
+    let myArr = str.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1, e.length));
+    return myArr.join(' ');
+}
+console.log(newFunction('capitalize the first letter of each word of a given string'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 51. Write a JavaScript program to convert a given number to hours and minutes.
 //—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(num) {
+    return `${Math.floor(num / 60)} hours and ${num % 60} minutes`;
+}
+console.log(newFunction(256));
+console.log(newFunction(488));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 52. Write a JavaScript program to convert the letters of a given string in alphabetical order.
 //—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    return str.split('').sort().join('');
+}
+console.log(newFunction('mynameisjason'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 53. Write a JavaScript program to check if the characters a and b are separated by exactly 3 places anywhere(at least once) in a given string.
 //—————————————————————————————————————————————————————————————————————————————— >
+/*
+function ab_Check(str) {
+    return (/a....b/).test(str) || (/b....a/).test(str);
+}
 
-
-
-
+console.log(ab_Check("Chainsbreak"));
+console.log(ab_Check("pane borrowed"));
+console.log(ab_Check("abCheck"));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 54. Write a JavaScript program to count the number of vowels in a given string.
 // —————————————————————————————————————————————————————————————————————————————— >
@@ -601,24 +644,22 @@ console.log(newFunction(2,18));
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 55. Write a JavaScript program to check
-// if a given string contains equal number of p 's and t'
-// s present.
+// 55. Write a JavaScript program to check if a given string contains equal number of p's and t's present.
 // —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 56. Write a JavaScript program to divide two positive numbers and
-// return a string with properly formatted commas.
+// 56. Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas.
 // —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 57. Write a JavaScript program to create a new string of specified copies(positive number) of a given string.—————————————————————————————————————————————————————————————————————————————— >
+// 57. Write a JavaScript program to create a new string of specified copies(positive number) of a given string.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
@@ -631,19 +672,22 @@ console.log(newFunction(2,18));
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 59. Write a JavaScript program to extract the first half of a string of even length.—————————————————————————————————————————————————————————————————————————————— >
+// 59. Write a JavaScript program to extract the first half of a string of even length.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 60. Write a JavaScript program to create a new string without the first and last character of a given string.—————————————————————————————————————————————————————————————————————————————— >
+// 60. Write a JavaScript program to create a new string without the first and last character of a given string.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 61. Write a JavaScript program to concatenate two strings except their first character.—————————————————————————————————————————————————————————————————————————————— >
+// 61. Write a JavaScript program to concatenate two strings except their first character.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
