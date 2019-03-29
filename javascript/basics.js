@@ -462,52 +462,78 @@ console.log(newFunction(26, 70));
 */
 // —————————————————————————————————————————————————————————————————————————————— >
 // 40. Write a JavaScript program to check from two given integers if either one is 8 or their sum or difference is 8.  —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(a,b) {
+    return a === 8 || b === 8 || a + b === 8 || Math.abs(a - b) === 8 ? true : false;
+}
 
-
-
-
+console.log(newFunction(4,4));
+console.log(newFunction(26,18));
+console.log(newFunction(2,18));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 41. Write a JavaScript program to check three given numbers,
-// if the three numbers are same
-// return 30 otherwise
-// return 40 and
-// if two numbers are same
-// return 20.
+// 41. Write a JavaScript program to check three given numbers, if the three numbers are same return 30 otherwise return 40 and if two numbers are same return 20.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function numCheck(a, b, c) {  // Could just do number = w/o adding
+    if ((a + b + c) / 3 === a) {
+        return 30;
+    } else if ((a + b) / 2 == a || (a + c) / 2 == a || (b + c) / 2 == b) {
+        return 20;
+    } else {
+        return 40;
+    }
+}
+console.log(numCheck(4, 4, 4));
+console.log(numCheck(4, 8, 8));
+console.log(numCheck(4, 8, 12));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 42. Write a JavaScript program to check
-// if three given numbers(integers) are increasing in strict mode and flag is "false", however
-// if "true"
-// is false the numbers will in soft mode.Note: Strict mode - > 10, 15, 31: Soft mode - > 24, 22, 31 or 22, 22, 31 —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+// 42. Write a JavaScript program to check if three given numbers (integers) are increasing in strict mode and flag is "false", however if "true" is false the numbers will in soft mode.
+// Note: Strict mode - > 10, 15, 31: Soft mode - > 24, 22, 31 or 22, 22, 31
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(a,b,c) {
+    return a < b && b < c ? 'Strict mode' : 'Soft Mode';
+}
+console.log(newFunction(3,7,9));
+console.log(newFunction(3,9,7));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 43. Write a JavaScript program to check from three given numbers(non negative integers) that two or all of them have the same rightmost digit.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function sameLastDigit(a, b, c) {
+    return (a % 10 === b % 10) || (a % 10 === c % 10) || (b % 10 === c % 10);  // % < 10 == original number
+}
+console.log(sameLastDigit(66, 606, 6766));
+console.log(sameLastDigit(1, 11, 31));
+console.log(sameLastDigit(1, 2, 3));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 44. Write a JavaScript program to check from three given integers that
-// if a number is greater than or equal to 20 and less than one of the others.—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+// 44. Write a JavaScript program to check from three given integers that if a number is greater than or equal to 20 and less than one of the others.
 // —————————————————————————————————————————————————————————————————————————————— >
-// 45. Write a JavaScript program to check two given integer values and
-// return true
-// if one of the number is 15 or
-// if their sum or difference is 15.
+/*
+function twentyCheck(x, y, z) {
+    return (x >= 20 && (x < y || x < z)) ||
+        (y >= 20 && (y < x || y < z)) ||
+        (z >= 20 && (z < y || z < x));
+}
+console.log(twentyCheck(31,12,105));
+console.log(twentyCheck(300,12,5));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
+// 45. Write a JavaScript program to check two given integer values and return true if one of the number is 15 or if their sum or difference is 15.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(a,b) {
+    return a === 15 || b === 15 || a + b === 15 || Math.abs(a - b) === 15 ? true : false;
+}
 
+console.log(newFunction(11,4));
+console.log(newFunction(26,18));
+console.log(newFunction(2,18));
+*/
 
 
 
@@ -519,20 +545,23 @@ console.log(newFunction(26, 70));
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 47. Write a JavaScript program to check
-// if a number in the range 40. .10000 inclusive presents in two number( in same range).For example 40 presents in 400 and 4000 —————————————————————————————————————————————————————————————————————————————— >
+// 47. Write a JavaScript program to check if a number in the range 40..10000 inclusive presents in two number (in same range).
+// For example 40 presents in 400 and 4000
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 48. Write a JavaScript program to reverse a given string.—————————————————————————————————————————————————————————————————————————————— >
+// 48. Write a JavaScript program to reverse a given string.
+//—————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.—————————————————————————————————————————————————————————————————————————————— >
+// 49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
@@ -544,26 +573,29 @@ console.log(newFunction(26, 70));
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 51. Write a JavaScript program to convert a given number to hours and minutes.—————————————————————————————————————————————————————————————————————————————— >
+// 51. Write a JavaScript program to convert a given number to hours and minutes.
+//—————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 52. Write a JavaScript program to convert the letters of a given string in alphabetical order.—————————————————————————————————————————————————————————————————————————————— >
+// 52. Write a JavaScript program to convert the letters of a given string in alphabetical order.
+//—————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 53. Write a JavaScript program to check
-// if the characters a and b are separated by exactly 3 places anywhere(at least once) in a given string.—————————————————————————————————————————————————————————————————————————————— >
+// 53. Write a JavaScript program to check if the characters a and b are separated by exactly 3 places anywhere(at least once) in a given string.
+//—————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 54. Write a JavaScript program to count the number of vowels in a given string.—————————————————————————————————————————————————————————————————————————————— >
+// 54. Write a JavaScript program to count the number of vowels in a given string.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
