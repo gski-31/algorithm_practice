@@ -639,108 +639,146 @@ console.log(ab_Check("abCheck"));
 // —————————————————————————————————————————————————————————————————————————————— >
 // 54. Write a JavaScript program to count the number of vowels in a given string.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    return str.match(/[aeiou]/g).length;
+}
+console.log(newFunction('dummy text'));
+console.log(newFunction('lotso-ooooooooooooooooooo'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 55. Write a JavaScript program to check if a given string contains equal number of p's and t's present.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    return str.match(/p/g).length === str.match(/t/g).length;
+}
+console.log(newFunction('patpat'));
+console.log(newFunction('patttttpat'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 56. Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(a,b) {
+    return Math.floor(a / b).toString().split('').join(', ');
+}
 
-
-
-
+console.log(newFunction(26, 2));
+console.log(newFunction(27, 2));
+console.log(newFunction(2560, 8));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 57. Write a JavaScript program to create a new string of specified copies(positive number) of a given string.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function strCopy(str, n) {
+return str.repeat(n);
+}
+console.log(strCopy("xyz", 5));
+console.log(strCopy("aeiou", 108));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 58. Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a given original string.The length of the given string must be 3 and above.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function lastThree(str) {
+    return str.slice(str.length-3, str.length).repeat(4);
+}
+console.log(lastThree('abcmnoxyz'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 59. Write a JavaScript program to extract the first half of a string of even length.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    return str.substring(0, Math.floor(str.length/2));
+}
+console.log(newFunction('abcdefg'));
+console.log(newFunction('abcxyz'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 60. Write a JavaScript program to create a new string without the first and last character of a given string.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    return str.substring(1, (str.length-1));
+}
+console.log(newFunction('abcdefg'));
+console.log(newFunction('abcxyz'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 61. Write a JavaScript program to concatenate two strings except their first character.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str1, str2) {
+    return str1.substring(1, str1.length) + str2.substring(1, str2.length); // anything further this should be a separate functions
+}
+console.log(newFunction('abc', 'xyz'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 62. Write a JavaScript program to move last three character to the start of a given string.The string length must be greater or equal to three.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    return str.substring(str.length - 3, str.length) + str.substring(0, str.length - 3)
+}
+console.log(newFunction('abcmnoxyz'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 63. Write a JavaScript program to create a string using the middle three characters of a given string of odd length.The string length must be greater or equal to three.
+// 63. Write a JavaScript program to create a string using the middle three characters of a given string of odd length. The string length must be greater or equal to three.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    let middle = (str.length + 1) / 2;
+    return str.slice(middle - 1.5, middle + 1.5);
+}
+console.log(newFunction('abcdefghi'));
+console.log(newFunction('abcdefgh'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 64. Write a JavaScript program to concatenate two strings and
-// return the result.If the length of the strings are not same then remove the characters from the longer string.
+// 64. Write a JavaScript program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(str1, str2) {
+    return str1.slice(0, str2.length) + str2.slice(0, str1.length);
+}
 
-
-
-
+console.log(newFunction('abcdefgh', 'xyz'));
+console.log(newFunction('abc', 'uvwxyz'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 65. Write a JavaScript program to test
-// if a string end with "Script".The string length must be greater or equal to 6.  —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+// 65. Write a JavaScript program to test if a string end with "Script".The string length must be greater or equal to 6.
 // —————————————————————————————————————————————————————————————————————————————— >
-// 66. Write a JavaScript program to display the city name
-// if the string begins with "Los"
-// or "New"
-// otherwise
-// return blank.
+/*
+function scriptTest(str) {
+    return str.endsWith('Script') && str.length > 6 ? true : false;
+}
+console.log(scriptTest('JavaScript'))
+console.log(scriptTest('JavaScripts'))
+console.log(scriptTest('dgffgsgfsgfdsgJavaScript'))
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+// 66. Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
 // —————————————————————————————————————————————————————————————————————————————— >
-// 67. Write a JavaScript program to create a new string from a given string, removing the first and last characters of the string
-// if the first or last character are 'P'.Return the original string
-// if the condition is not satisfied.
+/*
+function cityTest(str) {
+    return str.startsWith('New') || str.startsWith('Los') ? str : 'nope';
+}
+console.log(cityTest('New York'));
+console.log(cityTest('Los Angeles'));
+console.log(cityTest('Phoenix'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+// 67. Write a JavaScript program to create a new string from a given string, removing the first and last characters of the string if the first or last character are 'P'. Return the original string if the condition is not satisfied.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function pTest(str) {
+    return str.charAt(0) == 'p' || str.charAt(str.length) == 'p' ? str.substring(1, str.length - 1) : str;
+}
+console.log(pTest('piscapo'));
+console.log(pTest('joe'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 68. Write a JavaScript program to create a new string using the first and last n characters from a given sting.The string length must be greater or equal to n.
 // —————————————————————————————————————————————————————————————————————————————— >
