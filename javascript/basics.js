@@ -782,51 +782,75 @@ console.log(pTest('joe'));
 // —————————————————————————————————————————————————————————————————————————————— >
 // 68. Write a JavaScript program to create a new string using the first and last n characters from a given sting.The string length must be greater or equal to n.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function firstLast(str, n){
+return str.substring(0, n) + str.substring(str.length - n, str.length);
+}
+console.log(firstLast('abcdefghjklmnopqrstuvwxyz', 4));
+console.log(firstLast('firstmiddlelast!', 5));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 69. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.  —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(myArr) {
+    return myArr.reduce((a, b) => a + b);
+    }
+
+console.log(newFunction([26,54,231,89]));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 70. Write a JavaScript program to rotate the elements left of a given array of integers of length 3.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(myArr) {
+    let temp = myArr.shift();
+    return myArr.concat(temp); // longer but not limited to 3
+}
+
+console.log(newFunction([26, 54, 231, 89]));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 71. Write a JavaScript program to check if 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(myArr) {
+    return myArr[0] === 1 || myArr[myArr.length -1] === 1;
+}
+console.log(newFunction([1, 26, 54, 231, 89]));
+console.log(newFunction([26, 54, 231, 89, 1]));
+console.log(newFunction([26, 54, 231]));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 72. Write a JavaScript program to check if the first and last elements are equal of a given array of integers length 3.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(myArr) {
+    return myArr[0] ===  myArr[myArr.length - 1];
+}
+console.log(newFunction([1, 26, 54, 231, 89]));
+console.log(newFunction([26, 54, 231, 89, 1]));
+console.log(newFunction([26, 54, 231, 26]));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 73. Write a JavaScript program to reverse the elements of a given array of integers length 3.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(myArr) {
+    return myArr.reverse();
+}
+console.log(newFunction([1, 26, 54, 231, 89]));
+console.log(newFunction([26, 54, 231, 89, 1]));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 74. Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 70. Write a JavaScript program to rotate the elements left of a given array of integers of length 3.  —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 71. Write a JavaScript program to check
-// if 1 appears in first or last position of a given array of integers.The array length must be greater or equal to 1.  —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 72. Write a JavaScript program to check
-// if the first and last elements are equal of a given array of integers length 3.  —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 73. Write a JavaScript program to reverse the elements of a given array of integers length 3.  —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 74. Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value.Display the new array.
-// —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 75. Write a JavaScript program to create a new array taking the middle elements of the two arrays of integer and each length 3.  —————————————————————————————————————————————————————————————————————————————— >
+// 75. Write a JavaScript program to create a new array taking the middle elements of the two arrays of integer and each length 3.
+//—————————————————————————————————————————————————————————————————————————————— >
 
 
 
