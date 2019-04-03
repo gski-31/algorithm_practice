@@ -839,71 +839,92 @@ function newFunction(myArr) {
     return myArr.reverse();
 }
 console.log(newFunction([1, 26, 54, 231, 89]));
-console.log(newFunction([26, 54, 231, 89, 1]));
 */
 // —————————————————————————————————————————————————————————————————————————————— >
 // 74. Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(myArr) {
+    return myArr[0] > myArr[myArr.length-1] ? myArr.fill(myArr[0]) : myArr.fill(myArr[myArr.length-1]);
+}
+console.log(newFunction([26, 54, 231, 89, 1]));
+console.log(newFunction([26, 54, 231, 89]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 75. Write a JavaScript program to create a new array taking the middle elements of the two arrays of integer and each length 3.
 //—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(arr1, arr2) {
+    return [arr1[1], arr2[1]];
+}
+console.log(newFunction([26, 54, 231], [55, 66, 77]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 76. Write a JavaScript program to create a new array taking the first and last elements from a given array of integers and length must be greater or equal to 1.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(arr) {
+    return [arr[0], arr[arr.length-1]];
+}
+console.log(newFunction([26, 54, 231, 55, 66, 77]));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 77. Write a JavaScript program to test if an array of integers of length 2 contains 1 or a 3.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(myArr) {
+    // return myArr.indexOf(1) >= 0 || myArr.indexOf(3) >= 0 ? true : false;
+    return myArr.includes(1) || myArr.includes(3);
+}
+console.log(newFunction([26, 54, 231, 55, 66, 77]));
+console.log(newFunction([3, 54, 231, 55, 66, 77]));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 78. Write a JavaScript program to test if an array of integers of length 2 does not contain 1 or a 3.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(myArr) {
+    return myArr.indexOf(1) === -1 && myArr.indexOf(3) === -1 ? true : false;
+}
+console.log(newFunction([26, 54, 231, 55, 66, 77]));
+console.log(newFunction([3, 54, 231, 55, 66, 77]));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 79. Write a JavaScript program to test if a given array of integers contains 30 and 40 twice.The array length should be 0, 1, or 2.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function twice3040(arra1) {
+    let a = arra1[0];
+    let b = arra1[1];
+    return (a === 30 && b === 30) || (a === 40 && b === 40);
+}
+console.log(twice3040([30, 30]));
+console.log(twice3040([40, 40]));
+console.log(twice3040([20, 20]));
+console.log(twice3040([30]));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 80. Write a JavaScript program to swap the first and last elements of a given array of integers. The array length should be at least 1.
+// —————————————————————————————————————————————————————————————————————————————— >
+
+
+// —————————————————————————————————————————————————————————————————————————————— >
+// 81. Write a JavaScript program to add two digits of a given positive integer of length two.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 77. Write a JavaScript program to test
-// if an array of integers of length 2 contains 1 or a 3.  —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 78. Write a JavaScript program to test
-// if an array of integers of length 2 does not contain 1 or a 3.  —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 79. Write a JavaScript program to test
-// if a given array of integers contains 30 and 40 twice.The array length should be 0, 1, or 2.  —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 80. Write a JavaScript program to swap the first and last elements of a given array of integers.The array length should be at least 1.
+// 82. Write a JavaScript to add two positive integers without carry.
 // —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 81. Write a JavaScript program to add two digits of a given positive integer of length two.—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+// 83. Write a JavaScript to find the longest string from an given array of strings.
 // —————————————————————————————————————————————————————————————————————————————— >
-// 82. Write a JavaScript to add two positive integers without carry.—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 83. Write a JavaScript to find the longest string from an given array of strings.—————————————————————————————————————————————————————————————————————————————— >
 
 
 
