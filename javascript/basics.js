@@ -906,76 +906,153 @@ console.log(twice3040([30]));
 // —————————————————————————————————————————————————————————————————————————————— >
 // 80. Write a JavaScript program to swap the first and last elements of a given array of integers. The array length should be at least 1.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
+/*
+function newFunction(arr) {
+    return [arr[arr.length - 1], ...arr.slice(1, arr.length - 1), (arr[0])];  // use spread operator
+    // return [arr.pop(), ...arr.slice(1), arr.shift()]
+}
+console.log(newFunction([3, 54, 231, 55, 66, 77]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 81. Write a JavaScript program to add two digits of a given positive integer of length two.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(num) {
+    return Math.floor(num * .1) + (num % 10);
+}
+console.log(newFunction(54));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 82. Write a JavaScript to add two positive integers without carry.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function addDigits(num1, num2) {
+    let arr1 = num1.toString().split(''),
+        arr2 = num2.toString().split(''),
+        newArr = [];
+    length = Math.min(arr1.length, arr2.length),
+        difference = Math.abs(arr1.length - arr2.length);
 
+    if (arr1.length >= arr2.length) {
+        for (let i = length - 1; i >= 0; i--) {
+            let digit = Number(arr2[i]) + Number(arr1[difference + i]);
+            if (digit >= 10) {
+                newArr.unshift(digit % 10);
+            } else newArr.unshift(digit);
+        }
+        for (let i = difference - 1; i >= 0; i--) {
+            newArr.unshift(arr1[i]);
+        }
+        return Number(newArr.join(''));
+    } else if (arr2.length > arr1.length) {
+        for (let i = length - 1; i >= 0; i--) {
+            let digit = Number(arr1[i]) + Number(arr2[difference + i]);
+            if (digit >= 10) {
+                newArr.unshift(digit % 10);
+            } else newArr.unshift(digit);
+        }
+        for (let i = difference - 1; i >= 0; i--) {
+            newArr.unshift(arr2[i]);
+        }
+        return Number(newArr.join(''));
+    }
+}
 
-
-
+console.log(addDigits(222, 911)); // 133
+console.log(addDigits(200, 9000)); // 9200
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 83. Write a JavaScript to find the longest string from an given array of strings.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(arr) {
+    arr.sort((a,b) => a.length + b.length);
+    return arr[0];
+}
+console.log(newFunction(['abc', 'abcdef', 'asdfghjk', ' qwertyuioasdfgh']));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 84. Write a JavaScript to replace each character of a given string by the next one in the English alphabet.
+// Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(str) {
+    let newStr = '';
+    for (let i = 0; i < str.length; i++) {
+        newStr += String.fromCharCode(1 + str.charCodeAt(i));
+    }
+    return newStr;
+}
+console.log(newFunction('cfjmx'));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 85. Write a JavaScript code to divide an given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on.Now compute the sum of two parts and store into an array of size two.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(arr){
+let arr1 =[];
+let arr2 =[];
+for(let i = 0 ; i < arr.length ; i++){
+    if(i % 2 == 0){
+        arr1.push(arr[i])
+    } else {
+        arr2.push(arr[i])
+    }
+}
+console.log(arr1.reduce((a,b) => a + b));
+console.log(arr2.reduce((a, b) => a + b));
+}
+newFunction([26, 54, 23, 15, 16, 89, 21, 56, 48,]);
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 86. Write a JavaScript program to find the types of a given angle.
+// ••• Types of angles:
+// ••• Acute angle: An angle between 0 and 90 degrees.
+// ••• Right angle: An 90 degree angle.
+// ••• Obtuse angle: An angle between 90 and 180 degrees.
+// ••• Straight angle: A 180 degree angle.
+// —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(angle) {
+    if (angle > 0 && angle < 90) {
+        return 'acute';
+    } else if (angle == 90) {
+        return 'right';
+    } else if (angle > 90 && angle < 180) {
+        return 'obtuse';
+    } else if (angle == 180) {
+        return 'straight';
+    } else {
+        return 'over 180';
+    }
+}
+console.log(newFunction(65));
+console.log(newFunction(165));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 87. Write a JavaScript program to check whether two arrays of integers of same length are similar or not. The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 84. Write a JavaScript to replace each character of a given string by the next one in the English alphabet.Note: 'a'
-// will be replace by 'b'
-// or 'z'
-// would be replaced by 'a'.
+// 88. Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.
 // —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 85. Write a JavaScript code to divide an given array of positive integers into two parts.First element goes to first part, second element goes to second part, and third element goes to first part and so on.Now compute the sum of two parts and store into an array of size two.
+// 89. Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator( * ) to obtain x * y = z
 // —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 86. Write a JavaScript program to find the types of a given angle.Types of angles:
-// Acute angle: An angle between 0 and 90 degrees.Right angle: An 90 degree angle.Obtuse angle: An angle between 90 and 180 degrees.Straight angle: A 180 degree angle.
+// 90. Write a JavaScript program to find the kth greatest element of a given array of integers
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— > 87. Write a JavaScript program to check whether two arrays of integers of same length are similar or not.The arrays will be similar
-// if one array can be obtained from another array by swapping at most one pair of elements.—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 88. Write a JavaScript program to check whether two given integers are similar or not,
-// if a given divisor divides both integers and it does not divide either.—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 89. Write a JavaScript program to check whether two given integers are similar or not,
-// if a given divisor divides both integers and it does not divide either.For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator( * ) to obtain x * y = z —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 90. Write a JavaScript program to find the kth greatest element of a given array of integers  —————————————————————————————————————————————————————————————————————————————— >
 
 
 
