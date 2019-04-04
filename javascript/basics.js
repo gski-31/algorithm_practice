@@ -1033,8 +1033,18 @@ console.log(newFunction(165));
 // 87. Write a JavaScript program to check whether two arrays of integers of same length are similar or not. The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements.
 // —————————————————————————————————————————————————————————————————————————————— >
 
+function areSimilar(a, b) {
+    let s = [];
+    for(let i = 0; i < a.length;i++)
+        if(a[i] != b[i])
+            s.push(i);
+            console.log(s)
+    return s.length == 0 || s.length == 2 && a[s[0]] == b[s[1]] && b[s[0]] == a[s[1]];
+}
 
-
+console.log(areSimilar([10,20,30], [10,20,30]))
+console.log(areSimilar([10,20,30], [30,10,20]))
+console.log(areSimilar([10,20,30,40], [10,30,20,40]))
 
 // —————————————————————————————————————————————————————————————————————————————— >
 // 88. Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.
@@ -1058,37 +1068,43 @@ console.log(newFunction(165));
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 91. Write a JavaScript program to find the maximum possible sum of some of its k consecutive numbers(numbers that follow each other in order.) of a given array of positive integers.—————————————————————————————————————————————————————————————————————————————— >
+// 91. Write a JavaScript program to find the maximum possible sum of some of its k consecutive numbers(numbers that follow each other in order.) of a given array of positive integers.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 92. Write a JavaScript program to find the maximal difference between any two adjacent elements of a given array of integers.—————————————————————————————————————————————————————————————————————————————— >
+// 92. Write a JavaScript program to find the maximal difference between any two adjacent elements of a given array of integers.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 93. Write a JavaScript program to find the maximal difference among all possible pairs of a given array of integers.—————————————————————————————————————————————————————————————————————————————— >
+// 93. Write a JavaScript program to find the maximal difference among all possible pairs of a given array of integers.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 94. Write a JavaScript program to find the number which appears most in a given array of integers.—————————————————————————————————————————————————————————————————————————————— >
+// 94. Write a JavaScript program to find the number which appears most in a given array of integers.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 95. Write a JavaScript program to replace all the numbers with a specified number of a given array of integers.—————————————————————————————————————————————————————————————————————————————— >
+// 95. Write a JavaScript program to replace all the numbers with a specified number of a given array of integers.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 96. Write a JavaScript program to compute the sum of absolute differences of consecutive numbers of a given array of integers.—————————————————————————————————————————————————————————————————————————————— >
+// 96. Write a JavaScript program to compute the sum of absolute differences of consecutive numbers of a given array of integers.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
