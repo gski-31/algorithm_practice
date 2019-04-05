@@ -1153,47 +1153,80 @@ console.log(newFunction([2, 5, 6, 7, 8, 9, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
 // —————————————————————————————————————————————————————————————————————————————— >
 // 95. Write a JavaScript program to replace all the numbers with a specified number of a given array of integers.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(arr, a, b) {
+    return arr.map((item) => {
+        if (item === a) return b;
+        return item;
+    });
+}
+console.log(newFunction([5,5,5,3,3,3,2,2,2,1,1,1,1,1,1,], 2, 'two'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 96. Write a JavaScript program to compute the sum of absolute differences of consecutive numbers of a given array of integers.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(arr, a, b) {
+    let newArr = [];
+    for(let i = 1; i < arr.length ; i++){
+        newArr.push(Math.abs(arr[i] - arr[i-1]));
+    };
+    return newArr.reduce((a,b) => a + b);
+}
+console.log(newFunction([1, 2, 3, 2, -5]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 97. Write a JavaScript program to find the shortest possible string which can create a string to make it a palindrome by adding characters to the end of it.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+// BORROWED FROM https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-97.php
 
+function build_Palindrome(new_str) {
+  let flag;
+  for (let i = new_str.length;; i++) {
+    flag = true;
+    for (var j = 0; j < i - j - 1; j++) {
+      if (i - j - 1 < new_str.length && new_str[j] != new_str[i - j - 1]) {
+        flag = false;
+        break;
+      }
+    }
+    if (flag) {
+      for (var j = new_str.length; j < i; j++) {
+        new_str += new_str[i - j - 1];
+      }
+      return new_str;
+    }
+  }
+}
 
-
-
+console.log(build_Palindrome("abcddc"))
+console.log(build_Palindrome("122"))
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 98. Write a JavaScript program to
-// switch
-// case ofthe minimum possible number of letters to make a given string written in the upper
-// case or in the lower
-// case.Fox example "Write"
-// will be write and "PHp"
-// will be "PHP"
+// 98. Write a JavaScript program to switch case of the minimum possible number of letters to make a given string written in the upper case or in the lower case.
+// Fox example "Write" will be write and "PHp" will be "PHP"
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str) {
+    return str.match(/[A-Z]/g).length > str.match(/[a-z]/g).length ? str.toUpperCase() : str.toLowerCase() ;
+}
+console.log(newFunction('Jason'));
+console.log(newFunction('jASON'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 99. Write a JavaScript program to check whether it is possible to rearrange characters of a given string in such way that it will become equal to another given string.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(str1, str2) {
+    return str1.split('').sort().join() == str2.split('').sort().join();
+}
+console.log(newFunction('jason', 'nosaj'));
+console.log(newFunction('billy', 'nosaj'));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 100. Write a JavaScript program to check
-// if there is at least one element which occurs in two given sorted arrays of integers.—————————————————————————————————————————————————————————————————————————————— >
+// 100. Write a JavaScript program to check if there is at least one element which occurs in two given sorted arrays of integers.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
