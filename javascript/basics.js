@@ -1032,7 +1032,7 @@ console.log(newFunction(165));
 // —————————————————————————————————————————————————————————————————————————————— >
 // 87. Write a JavaScript program to check whether two arrays of integers of same length are similar or not. The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements.
 // —————————————————————————————————————————————————————————————————————————————— >
-
+/*
 function areSimilar(a, b) {
     let s = [];
     for(let i = 0; i < a.length;i++)
@@ -1045,56 +1045,111 @@ function areSimilar(a, b) {
 console.log(areSimilar([10,20,30], [10,20,30]))
 console.log(areSimilar([10,20,30], [30,10,20]))
 console.log(areSimilar([10,20,30,40], [10,30,20,40]))
-
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 88. Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(num1, num2, div) {
+    return (num1 % div === 0 && num2 % div === 0) || (num1 % div !== 0 && num2 % div !== 0)
+}
+console.log(newFunction(15,25,5));
+console.log(newFunction(15,25,2));
+console.log(newFunction(15,25,3));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 89. Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator( * ) to obtain x * y = z
+// 89. Write a JavaScript program to check whether it is possible to replace $ in a given expression x $ y = z with one of the four signs +, -, * or / to obtain a correct expression.
+// For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator(*) to obtain x * y = z
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(num1, num2, out) {
+    return num1 + num2 === out ||
+        num1 - num2 === out ||
+        num1 * num2 === out ||
+        num1 / num2 === out
+}
+console.log(newFunction(15, 25, 40));
+console.log(newFunction(15, 25, 2));
+console.log(newFunction(3, 25, 75));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 90. Write a JavaScript program to find the kth greatest element of a given array of integers
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(arr, num) {
+    return arr.sort((a, b) => a - b)[num-1]
+}
+console.log(newFunction([15, 25, 10, 2, 108, 40], 2));
+console.log(newFunction([15, 25, 10, 2, 108, 40], 5));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
-// 91. Write a JavaScript program to find the maximum possible sum of some of its k consecutive numbers(numbers that follow each other in order.) of a given array of positive integers.
+// 91. Write a JavaScript program to find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(arr) {
+    let newArr = [];
+    for(let i = 0 ; i < arr.length-1 ; i++){
+    newArr.push(arr[i] + arr[i +1]);
+    }
+    return newArr.sort((a,b) => b - a)[0];
+}
+console.log(newFunction([15, 25, 10, 2, 108, 40]));
+console.log(newFunction([15, 250, 10, 2, 150, 10]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 92. Write a JavaScript program to find the maximal difference between any two adjacent elements of a given array of integers.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length - 1; i++) {
+        newArr.push(arr[i] - arr[i + 1]);
+    }
+    return newArr.sort((a, b) => b - a)[0];
+}
+console.log(newFunction([15, 25, 10, 2, 108, 40]));
+console.log(newFunction([15, 250, 10, 2, 150, 10]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 93. Write a JavaScript program to find the maximal difference among all possible pairs of a given array of integers.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(arr) {
+    arr.sort((a, b) => b - a);
+    return arr[0] - arr[arr.length -1];
+}
+console.log(newFunction([15, 25, 10, 2, 108, 40]));
+console.log(newFunction([15, 250, 10, 2, 150, 10]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 94. Write a JavaScript program to find the number which appears most in a given array of integers.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(arr) {
+    let counter = {};
+    arr.forEach(function (val) {
+        counter[val] = (counter[val] || 0) + 1; // research hasOwnProperty
 
-
-
-
+    });
+    return counter;  // can also sort object & return 1st value
+}
+console.log(newFunction([15, 2, 25, 10, 2, 108, 2, 40, 25]));
+*/
+/*
+function newFunction(arr) {
+    let myObj = {};
+    arr.forEach(element => {
+        if (myObj.hasOwnProperty(element)) {
+            myObj[element]++;
+        }
+        else {
+            myObj[element] = 1;
+        }
+    });
+    return myObj;
+}
+console.log(newFunction([2, 5, 6, 7, 8, 9, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 15]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 95. Write a JavaScript program to replace all the numbers with a specified number of a given array of integers.
 // —————————————————————————————————————————————————————————————————————————————— >
