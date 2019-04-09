@@ -1227,46 +1227,78 @@ console.log(newFunction('billy', 'nosaj'));
 // —————————————————————————————————————————————————————————————————————————————— >
 // 100. Write a JavaScript program to check if there is at least one element which occurs in two given sorted arrays of integers.
 // —————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
+/*
+function newFunction(arr1, arr2) {
+    arr1.sort();
+    arr2.sort();
+    for(let i = 0 ; i < arr1.length ; i++ ){
+        if(arr2.indexOf(arr1[i]) != -1){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+console.log(newFunction([6, 4, 4, 3, 2, 1], [1, 2, 1, 2, 2,]));
+console.log(newFunction([6, 4, 4, 3, 2, 1], [0, 0, 0, 0, 0]));
+*/
 // —————————————————————————————————————————————————————————————————————————————— >
 // 101. Write a JavaScript program to check whether a given string contains only Latin letters and no two uppercase and no two lowercase letters are in adjacent positions.
 // —————————————————————————————————————————————————————————————————————————————— >
+/*
+function newFunction(str) {
+//    return !/(?:[A-Z]{2}|[a-z]{2}|[\d]|[^A-Za-z]+)/g.test(str);
+    // return !/^[A-Z]{2}|[a-z]{2}|[\d]|[^A-Za-z]+$/g.test(str);
+    return ^(?![\d])(?![A-Z]{2})(?![a-z]{2})[A-Za-z ]+$
+}
+console.log(newFunction('test THIS string'));
+console.log(newFunction('TeSt Me ToO'));
+console.log(newFunction('abc8965'));
+*/
+// —————————————————————————————————————————————————————————————————————————————— >
+// 102. Write a JavaScript program to find the number of inversions of a given array of integers.
+// Note: Two elements of the array a stored at positions i and j form an inversion if a[i] > a[j] and i < j.
+// —————————————————————————————————————————————————————————————————————————————— >
+
+function number_of_InversionsNaive(arr) {
+    let ctr = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] > arr[j])
+                ctr++;
+        }
+    }
+    return ctr;
+}
+
+console.log(number_of_InversionsNaive([0, 3, 2, 5, 9]));
+console.log(number_of_InversionsNaive([1, 5, 4, 3]));
+console.log(number_of_InversionsNaive([10, 30, 20, -10]));
+
+
+// —————————————————————————————————————————————————————————————————————————————— >
+// 103. Write a JavaScript program to find the maximal number from a given positive integer by deleting exactly one digit of the given number.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 102. Write a JavaScript program to find the number of inversions of a given array of integers.Note: Two elements of the array a stored at positions i and j form an inversion
-// if a[i] > a[j] and i < j.
+// 104. Write a JavaScript program to find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer.
 // —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 103. Write a JavaScript program to find the maximal number from a given positive integer by deleting exactly one digit of the given number.—————————————————————————————————————————————————————————————————————————————— >
+// 105. Write a JavaScript program to find the number of times to replace a given number with the sum of its digits until it convert to a single digit number.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 104. Write a JavaScript program to find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer.—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 105. Write a JavaScript program to find the number of times to replace a given number with the sum of its digits until it convert to a single digit number.—————————————————————————————————————————————————————————————————————————————— >
-
-
-
-
-// —————————————————————————————————————————————————————————————————————————————— >
-// 106. Write a JavaScript program to divide an integer by another integer as long as the result is an integer and
-// return the result.
+// 106. Write a JavaScript program to divide an integer by another integer as long as the result is an integer and return the result.
 // —————————————————————————————————————————————————————————————————————————————— >
 
 
@@ -1286,19 +1318,22 @@ console.log(newFunction('billy', 'nosaj'));
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 109. Write a JavaScript program to sort an array of all prime numbers between 1 and a given integer.—————————————————————————————————————————————————————————————————————————————— >
+// 109. Write a JavaScript program to sort an array of all prime numbers between 1 and a given integer.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 110. Write a JavaScript program to find the number of even values in sequence before the first occurrence of a given number.—————————————————————————————————————————————————————————————————————————————— >
+// 110. Write a JavaScript program to find the number of even values in sequence before the first occurrence of a given number.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
 
 // —————————————————————————————————————————————————————————————————————————————— >
-// 111. Write a JavaScript program to check a number from three given numbers where two numbers are equal, find the third one.—————————————————————————————————————————————————————————————————————————————— >
+// 111. Write a JavaScript program to check a number from three given numbers where two numbers are equal, find the third one.
+// —————————————————————————————————————————————————————————————————————————————— >
 
 
 
